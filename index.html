@@ -3,50 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Advent Calendar 2025</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Advent Calendar</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">Advent Day XX</h1>
-      <p class="site-sub">Small daily project: HTML + CSS + <span id="tech-name">TECH</span></p>
-    </div>
-  </header>
-
-  <main class="container" id="main">
-    <section class="card" id="demo">
-      <h2 class="card-title">Demo</h2>
-      <div id="app" class="card-body">
-        <!-- UI goes here -->
-      </div>
-    </section>
-
-    <section class="card" id="instructions">
-      <h2 class="card-title">How to run</h2>
-      <div class="card-body">
-        <ol>
-          <li>Open <strong>index.html</strong> in a browser for static demos.</li>
-          <li>Follow language-specific README steps for server backends.</li>
-        </ol>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <small>Day XX • HTML + CSS + <span id="tech-footer">TECH</span></small>
-    </div>
-  </footer>
-
-  <script>
-    // Replace placeholders with the day's tech name
-    const tech = 'Vanilla JavaScript';
-    document.getElementById('tech-name').textContent = tech;
-    document.getElementById('tech-footer').textContent = tech;
-  </script>
-
-  <!-- Day-specific script -->
-  <script src="app.js" defer></script>
+  <main class="calendar" id="calendar"></main>
+  <template id="door-template">
+    <button class="door">
+      <div class="face front"></div>
+      <div class="face back"></div>
+    </button>
+  </template>
+  <script src="script.js"></script>
 </body>
 </html>
