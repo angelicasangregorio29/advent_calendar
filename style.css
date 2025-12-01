@@ -1,35 +1,23 @@
-:root{
-  --bg:#0b1220; --card:#fff; --accent:#c62828;
+* {
+  box-sizing: border-box;
 }
-*{box-sizing:border-box}
-body{
-  margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
-  background:linear-gradient(180deg,#071021 0%,#0b1220 100%);
-  font-family:system-ui,Segoe UI,Roboto;
-  padding:24px;
+
+.btn-start {
+  background-color: coral;
+  color: whitesmoke;
+  border: 2px solid #512751;
+  border-radius: 15px;
+  margin: 15px auto;
+  display: block;
+  width: 10rem;
+  height: 2rem;
 }
-.calendar{
-  width:min(1000px,95vw);
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  gap:12px;
+
+
+.container {
+  width: 800px;
+  height: 900px;
+  border: 5px solid #080300;
+  margin: 15px auto;
+  background-image: url("./courses/calendar.png") ;
 }
-.door{
-  position:relative; padding:0; border:0; cursor:pointer;
-  perspective:800px; height:120px; background:none;
-}
-.face{
-  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-  border-radius:8px; backface-visibility:hidden; transition:transform .6s;
-  box-shadow:0 6px 18px rgba(0,0,0,.35);
-}
-.front{
-  background:linear-gradient(180deg,var(--accent),#8b0000);
-  color:#fff; font-weight:700; font-size:28px;
-}
-.back{
-  background:var(--card); color:#111; transform:rotateY(180deg); padding:12px; text-align:center;
-}
-.door.open .front{ transform:rotateY(180deg); }
-.door.open .back{ transform:rotateY(0deg); }
-.door.locked{ opacity:.45; cursor:not-allowed; }
